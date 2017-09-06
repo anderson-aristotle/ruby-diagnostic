@@ -48,7 +48,7 @@ Diagnostic.integer = 'your response here'
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
 
-Diagnostic.numbers = ['decimal', 'integer']
+Diagnostic.numbers = %w[decimal integer]
 
 # Falsiness in Ruby
 #
