@@ -46,7 +46,7 @@ RSpec.describe 'Diagnostic' do
     it 'contains examples of both number types' do
       responses = [
         subject.numbers.any? { |number| number.class == Float },
-        subject.numbers.any? { |number| number.class == Fixnum }
+        subject.numbers.any? { |number| number.class == Integer }
       ]
 
       expect(responses).to eql([true, true])
