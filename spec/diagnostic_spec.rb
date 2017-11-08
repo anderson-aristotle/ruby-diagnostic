@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../lib/diagnostic_redo.rb'
+require_relative '../lib/diagnostic.rb'
 
 RSpec.describe 'Diagnostic' do
   subject(:diagnostic) { Diagnostic }
@@ -35,7 +35,7 @@ RSpec.describe 'Diagnostic' do
   describe '.message' do
     it 'returns the correct message' do
       expect(subject.message.length).to eql(10)
-      expect(subject.message[3]).to eql('t')
+      expect(subject.message[1]).to eql('t')
       expect(subject.message[9]).to eql('t')
     end
   end
@@ -63,7 +63,7 @@ RSpec.describe 'Diagnostic' do
   describe '.array_add_to' do
     it 'contains the correct values' do
       expect(subject.array_add_to.length).to eql(4)
-      expect(subhect.array_add_to[3]).to eql(99)
+      expect(subject.array_add_to[3]).to eql(99)
     end
   end
 
