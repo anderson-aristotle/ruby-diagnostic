@@ -45,15 +45,15 @@ Diagnostic.falsy = []
 
 # Question 4
 
-# Change the string stored in the `the_truth` so that it uses Ruby string
-# interpolation to replace `BLANK` with the value of `character`
+# Change the string stored in the `Diagnostic.interpolation` so that it uses
+# Ruby string interpolation to replace `BLANK` with the value of `character`.
 
 character = 'Jar Jar Binks'
-Diagnostic.the_truth = 'BLANK is really a Sith lord.' # change this string
+Diagnostic.interpolation = 'BLANK is really a Sith lord.' # change this string
 
 # Question 5
 
-# Run the Ruby script stored named `message.rb` in the `lib` directory.
+# Run the Ruby script named `message.rb` in the `lib` directory.
 # No need to look at the code in that file. What did it print to the terminal?
 # Paste the output of that script below.
 
@@ -122,8 +122,8 @@ Diagnostic.person_hash = nil
 # This question is about reading documentation.
 # Start here: https://ruby-doc.org/core-2.4.0/String.html
 
-def normalize(text)
+def Diagnostic.normalize(text)
   # your code here
 end
 
-Diagnostic.normalize = normalize
+# Diagnostic.normalize = normalize
