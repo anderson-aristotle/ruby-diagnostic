@@ -48,7 +48,7 @@ Diagnostic.falsy = []
 # Change the string stored in the `Diagnostic.interpolation` so that it uses
 # Ruby string interpolation to replace `BLANK` with the value of `character`.
 
-character = 'Jar Jar Binks'
+character = 'Jar Jar Binks' # rubocop:disable Lint/UselessAssignment
 Diagnostic.interpolation = 'BLANK is really a Sith Lord.' # change this string
 
 # Question 5
@@ -122,8 +122,6 @@ Diagnostic.person_hash = nil
 # This question is about reading documentation.
 # Start here: https://ruby-doc.org/core-2.4.0/String.html
 
-def Diagnostic.normalize(text)
+def Diagnostic.normalize(text) # rubocop:disable Lint/UnusedMethodArgument
   # your code here
 end
-
-# Diagnostic.normalize = normalize
