@@ -3,62 +3,25 @@
 require 'ostruct'
 Diagnostic = OpenStruct.new
 
-# Running scripts from the command line
-#
-# In a Ruby string, write the command you would use to run a script at
-# `lib/example.rb`
+# NOTE: This diagnostic will be scored by tests. Run `bin/rake test` to see how
+# you're doing. If the test output doesn't contain a line like this:
 
-Diagnostic.script = 'your response here'
+# 19 examples, 16 failures
 
-# Using the REPL
-#
-# In a Ruby string, write the command you would use to enter the REPL we
-# prefer over `irb`
+# And instead contains a stack trace and an error message, that means you have a
+# syntax error that is breaking the tests. If you submit this diagnostic with
+# broken tests, you will recieve a zero. Read the error message! It will help
+# you find the syntax error. It even gives you a line number!
 
-Diagnostic.repl = 'your response here'
+# Question 1
 
-# Naming conventions in Ruby
-#
-# In a Ruby string, write what you would write to properly name a variable in
-# Ruby that read in English as "star wars episode viii".
-
+# Imagine you want to represent the English phrase "favorite Star Wars movie" as
+# a Ruby variable. What would you name that variable according to Ruby
+# convention? Replace the contents of the string below with your answer.
 Diagnostic.variable = 'your response here'
 
-# String interpolation in Ruby
-#
-# Use string interpolation to complete the sentence below. Replace "ANSWER" with
-# the correct code.
+# Question 2
 
-character = 'Jar Jar Binks'
-
-Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
-
-# Numbers in Ruby
-#
-# What is the type of object in Ruby for decimal numbers? Write your answer in
-# a Ruby string.
-
-Diagnostic.decimal = 'your response here'
-
-# What is the type of object in Ruby for integer numbers? Write your answer in
-# a Ruby string.
-
-Diagnostic.integer = 'your response here'
-
-# Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
-# in the following array with your examples.
-
-Diagnostic.numbers = %w[decimal integer]
-
-# Falsiness in Ruby
-#
-# Write all the values that evaluate to "falsy" in Ruby. Write these values in
-# a Ruby array.
-
-Diagnostic.falsy = []
-
-# Flow control in Ruby
-#
 # Examine the following code.
 
 batman = 'Bruce Wayne'
@@ -69,49 +32,96 @@ else
   'Just your average billionaire'
 end
 
-# What value will be returned. Write your response as a Ruby string.
+# What value will be returned? Write your response as a Ruby string below.
 
 Diagnostic.flow_control = 'your response here'
+
+# Question 3
+
+# Write all the values that evaluate to "falsy" in Ruby. Write these values in
+# a Ruby array.
+
+Diagnostic.falsy = []
+
+# Question 4
+
+# Change the string stored in the `Diagnostic.interpolation` so that it uses
+# Ruby string interpolation to replace `BLANK` with the value of `character`.
+
+character = 'Jar Jar Binks' # rubocop:disable Lint/UselessAssignment
+Diagnostic.interpolation = 'BLANK is really a Sith Lord.' # change this string
+
+# Question 5
+
+# Run the Ruby script named `message.rb` in the `lib` directory.
+# No need to look at the code in that file. What did it print to the terminal?
+# Paste the output of that script below.
+
+Diagnostic.message = 'your response here'
+
+# Question 6
 
 # In a Ruby string, write what keyword you use for "else if" clauses in Ruby.
 
 Diagnostic.else_if = 'your response here'
 
-# Returns in Ruby
-#
+# Question 7
+
 # Does ruby require an explicit return from methods? Answer true or false, and
 # replace nil.
 
 Diagnostic.returns = nil
 
-# Ruby Arrays
-#
+# Question 8
+
 # Given the following array:
 
-arr = [12, 34, 56, 67]
+arr = [12, 34, 56, 67] # Don't modify this line!
 
-# In a Ruby string, write how you would remove the last two elements from this
-# array
+# Write code that will modify the array above by removing the last two elements.
 
-Diagnostic.remove_from_array = 'your answer here'
+# Your code here
 
-# Taking the result from the question above, what would `arr` now equal:
-arr[arr.length + 2] = 99
-# Write your response as a ruby string
+Diagnostic.remove_from_array = arr # Don't modify this line either!
 
-Diagnostic.array_add_to = 'your answer here'
+# Question 9
 
-# Ruby Hashes
-#
+# This line makes a copy of `arr` as it looks after you've rempoved the last
+# two elements
+new_arr = arr.clone # Don't modify this line!
+
+# Modify `new_arr` by adding the number 99 as the fourth element in the array.
+
+# your code here
+
+Diagnostic.array_add_to = new_arr # Don't touch me
+
+# Question 10
+
+# After completing the above, what is the third element in new_arr?
+# Replace the string below with your answer.
+
+Diagnostic.index_2 = 'your response here'
+
+# Question 11
+
 # Instantiate a `person` hash with `favorite_number` and `first_name` as symbols
 # and a favorite number and a first name as their respective values.
-# Use shorthand to make this one line long.
-# Write your response as a Ruby string.
+# Replace `nil` below with the hash.
 
-Diagnostic.person_hash = 'your answer here'
+Diagnostic.person_hash = nil
 
-# Set a default return value to your `person` hash that concatenates the value
-# of person[:first_name] and a message about them.
-# Write your response as a Ruby string.
+# Question 12
 
-Diagnostic.hash_default = 'your answer here'
+# Fill in the method below so that it reverses the string passed in as `text`,
+# changes all the letters to uppercase, and returns the modified string.
+
+# For example: "hello" => "OLLEH"
+
+# We haven't taught you any of this!
+# This question is about reading documentation.
+# Start here: https://ruby-doc.org/core-2.4.0/String.html
+
+def Diagnostic.normalize(text) # rubocop:disable Lint/UnusedMethodArgument
+  # your code here
+end

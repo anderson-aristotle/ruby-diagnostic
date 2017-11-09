@@ -5,21 +5,23 @@ require_relative '../lib/diagnostic.rb'
 RSpec.describe 'Diagnostic' do
   subject(:diagnostic) { Diagnostic }
 
-  describe '.script' do
-    it 'returns a string with the correct command' do
-      expect(subject.script).to eql('ruby lib/example.rb')
-    end
-  end
-
-  describe '.repl' do
-    it 'returns a string with the correct command' do
-      expect(subject.repl).to eql('pry')
-    end
-  end
-
   describe '.variable' do
-    it 'returns a stringified, correctly-named variable name' do
-      expect(subject.variable).to eql('star_wars_episode_viii')
+    it 'returns a string with the correct variable name' do
+      expect(subject.variable).to eql('favorite_star_wars_movie')
+    end
+  end
+
+  describe '.flow_control' do
+    it 'returns a string with correct prediction' do
+      expect(subject.flow_control).to eql('The Dark Knight')
+    end
+  end
+
+  describe '.falsy' do
+    it 'contains the correct values only' do
+      expect(subject.falsy).to include(nil)
+      expect(subject.falsy).to include(false)
+      expect(subject.falsy.length).to eql(2)
     end
   end
 
@@ -30,51 +32,11 @@ RSpec.describe 'Diagnostic' do
     end
   end
 
-  describe '.decimal' do
-    it 'returns a string containing the correct number type' do
-      expect(subject.decimal).to eql('Float')
-    end
-  end
-
-  describe '.integer' do
-    it 'returns a string containing the correct number type' do
-      expect(subject.integer).to eql('Fixnum')
-    end
-  end
-
-  describe '.numbers' do
-    it 'contains examples of both number types' do
-      responses = [
-        subject.numbers.any? { |number| number.class == Float },
-        subject.numbers.any? { |number| number.class == Integer }
-      ]
-
-      expect(responses).to eql([true, true])
-    end
-  end
-
-  describe '.falsy' do
-    it 'contains only falsy' do
-      expect(subject.falsy).to all(be_falsy)
-    end
-
-    it 'contains only two values' do
-      expect(subject.falsy.length).to equal(2)
-    end
-
-    it 'contains all values which evaluate to false' do
-      responses = [
-        subject.falsy.any?(&:nil?),
-        subject.falsy.any? { |e| e == false }
-      ]
-
-      expect(responses).to all(be_truthy)
-    end
-  end
-
-  describe '.flow_control' do
-    it 'returns a string with correct prediction' do
-      expect(subject.flow_control).to eql('The Dark Knight')
+  describe '.message' do
+    it 'returns the correct message' do
+      expect(subject.message.length).to eql(10)
+      expect(subject.message[1]).to eql('t')
+      expect(subject.message[9]).to eql('t')
     end
   end
 
@@ -91,30 +53,42 @@ RSpec.describe 'Diagnostic' do
   end
 
   describe '.remove_from_array' do
-    it 'removes the last two elements from an array' do
-      expect(subject.remove_from_array).to eql('arr.pop 2')
+    it 'contains the correct values only' do
+      expect(subject.remove_from_array).to include(12)
+      expect(subject.remove_from_array).to include(34)
+      expect(subject.remove_from_array.length).to eql(2)
     end
   end
 
   describe '.array_add_to' do
-    it 'returns a naturally grown array based on index assignment' do
-      expect(subject.array_add_to).to eql('[12, 34, 56, 67, nil, nil, 99]')
-        .or eql('[12, 34, nil, nil, 99]')
+    it 'contains the correct values' do
+      expect(subject.array_add_to.length).to eql(4)
+      expect(subject.array_add_to[3]).to eql(99)
+    end
+  end
+
+  describe '.index_2' do
+    it 'contains the correct value' do
+      expect(subject.index_2).to eql(nil)
     end
   end
 
   describe '.person_hash' do
     it 'creates hash containing :favorite_number and :first_name symbols' do
-      expect(subject.person_hash).to include('person = {first_name:')
-        .or include('person = {favorite_number:')
-        .and include('first_name:').or include('favorite_number:')
+      expect(subject.person_hash).to be_a(Hash)
+      expect(subject.person_hash).to have_key(:first_name)
+      expect(subject.person_hash).to have_key(:favorite_number)
     end
   end
 
-  describe '.hash_default' do
-    it 'assigns a string default to the hash' do
-      expect(subject.hash_default)
-        .to include('person.default = "#{person[:first_name]}')
+  describe '.normalize' do
+    it 'should return the correct values' do
+      str1 = 'hello'
+      str2 = 'racecar'
+      str3 = 'wEiRd CapitalIZATION'
+      expect(subject.normalize(str1)).to eql('OLLEH')
+      expect(subject.normalize(str2)).to eql('RACECAR')
+      expect(subject.normalize(str3)).to eql('NOITAZILATIPAC DRIEW')
     end
   end
 end
