@@ -67,9 +67,8 @@ Diagnostic.else_if = 'your response here'
 
 # Question 7
 
-# Does ruby require an explicit return from methods? Answer true or false, and
-# replace nil.
-
+# True or false: Ruby requires explicit returns from methods. Replace `nil`
+# with your answer.
 Diagnostic.returns = nil
 
 # Question 8
@@ -122,6 +121,6 @@ Diagnostic.person_hash = nil
 # This question is about reading documentation.
 # Start here: https://ruby-doc.org/core-2.4.0/String.html
 
-def Diagnostic.normalize(text) # rubocop:disable Lint/UnusedMethodArgument
+def Diagnostic.normalize(text)
   # your code here
 end
