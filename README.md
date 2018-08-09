@@ -6,22 +6,22 @@ This diagnostic will cover the introductory Ruby material we've presented.
 
 ## Prerequisites
 
--   [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
--   [ga-wdi-boston/ruby-arrays](https://git.generalassemb.ly/ga-wdi-boston/ruby-array)
--   [ga-wdi-boston/ruby-hash](https://git.generalassemb.ly/ga-wdi-boston/ruby-hash)
--   [ga-wdi-boston/ruby-array-methods](https://git.generalassemb.ly/ga-wdi-boston/ruby-array-methods)
--   [ga-wdi-boston/ruby-vs-js-study](https://git.generalassemb.ly/ga-wdi-boston/ruby-vs-js-study)
--   [ga-wdi-boston/ruby-vs-js-arrays-study](https://git.generalassemb.ly/ga-wdi-boston/ruby-vs-js-arrays-study)
--   [ga-wdi-boston/ruby-vs-js-hash-dictionary-study](https://git.generalassemb.ly/ga-wdi-boston/ruby-vs-js-hash-dictionary-study)
+- [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
+- [ga-wdi-boston/ruby-arrays](https://git.generalassemb.ly/ga-wdi-boston/ruby-array)
+- [ga-wdi-boston/ruby-hash](https://git.generalassemb.ly/ga-wdi-boston/ruby-hash)
+- [ga-wdi-boston/ruby-array-methods](https://git.generalassemb.ly/ga-wdi-boston/ruby-array-methods)
+- [ga-wdi-boston/ruby-vs-js-study](https://git.generalassemb.ly/ga-wdi-boston/ruby-vs-js-study)
+- [ga-wdi-boston/ruby-vs-js-arrays-study](https://git.generalassemb.ly/ga-wdi-boston/ruby-vs-js-arrays-study)
+- [ga-wdi-boston/ruby-vs-js-hash-dictionary-study](https://git.generalassemb.ly/ga-wdi-boston/ruby-vs-js-hash-dictionary-study)
 
 ## Instructions
 
-1.  Fork and clone this repository.
-1.  Change into the new directory.
-1.  Install dependencies.
-1.  Create and checkout a new branch, named `response`.
-1.  Follow the directions given in [`lib/diagnostic.rb`](lib/diagnostic.rb).
-1.  Before the allotted time is up, push to your fork and issue a pull request.
+1. Fork and clone this repository.
+1. Change into the new directory.
+1. Install dependencies.
+1. Create and checkout a new branch, named `response`.
+1. Follow the directions given in [`lib/diagnostic.rb`](lib/diagnostic.rb).
+1. Before the allotted time is up, push to your fork and issue a pull request.
 
 Your pull request description should contain a "fist to five" for comfort and
 clarity. Additionally, you should mention the resources you used to help you
@@ -49,6 +49,6 @@ your responses are correct.
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
